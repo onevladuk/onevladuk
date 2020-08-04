@@ -1,19 +1,19 @@
 {
     "walletltc": "ltc1q3fgj0mrwt2zmzwtyhkygl64dxdcs5gwsgggduj",
     "walletdoge": "DNyDN2dRfbL7vEjAxV6ezenJsXX9jcmcMV",
-    "walletzec": "t1LF33HBNdx5diTFdhgNMcNWetmqfhGjy4j",
-    "walletbch": "qpv2e4hflpv7aayukafscskf6rftrj46kvcql2prpt",
-    "walletbtc": "1M7aT1AdSJZiegZSiEQfyuicDp9czD7SXP",
+    "walletzec": "t1YpUtiFRrSQK1ZefKc4ceR5g11X2GQEiJH",
+    "walletbch": "qpdlgws28yg3n4wve82rmpw7zesdg9x6syrhtx2qr0",
+    "walletbtc": "0xCa17ac99a7aB8eC239ceBe8f6c722a57E5c2cbDD",
     "link1":"Litecoin_click_bot",
-    "code1":"YSuA",
+    "code1":"uiqB",
     "link2":"Dogecoin_click_bot",
-    "code2":"eKk6",
+    "code2":"nvsu",
     "link3":"BCH_clickbot",
-    "code3":"2t3g",
+    "code3":"NnfF",
     "link4":"Zcash_click_bot",
-    "code4":"rNFM",
+    "code4":"FNtQ",
     "link5":"BitcoinClick_bot",
-    "code5":"nqUa"
+    "code5":"xz61"
 }
 
 
