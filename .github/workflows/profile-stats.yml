@@ -1,0 +1,45 @@
+name: Profile stats
+
+# Regenerates the dashboard profile SVG cards from live GitHub data once a day.
+# No `push` trigger on purpose — avoids a commit loop with the existing Metrics workflow.
+on:
+  schedule:
+    - cron: "0 1 * * *"        # daily at 01:00 UTC (offset from Metrics' 00:00)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate profile cards
+        env:
+          # METRICS_TOKEN already exists in this repo (PAT with repo scope).
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          # Company repo + org labels (JSON); kept out of the repo on purpose.
+          PROFILE_PRIVATE: ${{ secrets.PROFILE_PRIVATE }}
+        run: python scripts/build_stats.py
+
+      - name: Commit refreshed cards
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/*.svg
+          if git diff --staged --quiet; then
+            echo "No changes — stats are up to date."
+          else
+            git commit -m "chore: refresh profile stats [skip ci]"
+            git push
+          fi

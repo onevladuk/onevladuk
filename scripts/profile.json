@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "prompt": "keep building",
+    "lines": [
+      "Software engineer & AI integrator at KTC.",
+      "I build AI agents, MCP servers and developer tools — and, after hours, ESP32 gadgets, games and websites."
+    ],
+    "facts": [
+      {
+        "icon": "dot-fill",
+        "accent": true,
+        "text": "Open to collaborate"
+      },
+      {
+        "icon": "tools",
+        "text": "Stack: {stack}"
+      },
+      {
+        "icon": "cpu",
+        "text": "AI agents · dev tools · firmware · web"
+      },
+      {
+        "icon": "rocket",
+        "text": "For fun: S.T.A.L.K.E.R. gadgets & games"
+      }
+    ]
+  },
+  "quote": {
+    "text": "Small, consistent steps lead to great results.",
+    "author": "unknown",
+    "items": [
+      {
+        "icon": "goal",
+        "text": "Focus"
+      },
+      {
+        "icon": "tools",
+        "text": "Better tools"
+      },
+      {
+        "icon": "code",
+        "text": "Clean code"
+      },
+      {
+        "icon": "mute",
+        "text": "Less noise"
+      },
+      {
+        "icon": "zap",
+        "text": "More Zone"
+      }
+    ]
+  },
+  "exclude": [
+    "onevladuk",
+    "github-readme-stats1",
+    "test_repo_1"
+  ]
+}
